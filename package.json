@@ -5,7 +5,9 @@
   "main": "index.js",
   "scripts": {
     "start": "node index.js",
-    "test": "cross-env NODE_ENV=test jest ."
+    "dev": "nodemon -i -L \"*.test.js\" .",
+    "test": "cross-env NODE_ENV=test jest",
+    "coverage": "yarn test -- --coverage"
   },
   "author": "Digicontributer",
   "license": "MIT",
@@ -26,6 +28,7 @@
     "cross-env": "^6.0.3",
     "jest": "^25.1.0",
     "nock": "^11.7.2",
+    "nodemon": "^2.0.2",
     "supertest": "^4.0.2"
   },
   "jest": {
