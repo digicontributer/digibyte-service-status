@@ -4,7 +4,8 @@
   "description": "Status API for various DigiByte Ecosystem Services",
   "main": "index.js",
   "scripts": {
-    "start": "node index.js"
+    "start": "node index.js",
+    "test": "cross-env NODE_ENV=test jest ."
   },
   "author": "Digicontributer",
   "license": "MIT",
@@ -22,6 +23,14 @@
     "winston": "^3.2.1"
   },
   "devDependencies": {
-    "jest": "^25.1.0"
+    "cross-env": "^6.0.3",
+    "jest": "^25.1.0",
+    "nock": "^11.7.2"
+  },
+  "jest": {
+    "testEnvironment": "node",
+    "coveragePathIgnorePatterns": [
+      "/node_modules/"
+    ]
   }
 }
