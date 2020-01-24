@@ -26,7 +26,9 @@ Gmail Account
 
 yarn run test
 
-Please read [CONTRIBUTING.md](https://github.com/digicontributer/digibyte-service-status/CONTRIBUTING.md) for details on our code of conduct, and the process for submitting pull requests to us.
+## Contributing
+
+Please read [CONTRIBUTING.md](https://github.com/digicontributer/digibyte-service-status/blob/master/CONTRIBUTING.md) for details on our code of conduct, and the process for submitting pull requests to us.
 
 ## Authors
 
