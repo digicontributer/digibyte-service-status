@@ -6,6 +6,7 @@
   "scripts": {
     "start": "node index.js",
     "dev": "nodemon -i -L \"*.test.js\" .",
+    "docs": "apidoc -i api -o docs && apidoc-markdown -p docs -o DOCS.md",
     "test": "cross-env NODE_ENV=test jest",
     "coverage": "yarn test -- --coverage"
   },
@@ -25,6 +26,8 @@
     "winston": "^3.2.1"
   },
   "devDependencies": {
+    "apidoc": "^0.20.0",
+    "apidoc-markdown": "^0.2.1",
     "cross-env": "^6.0.3",
     "jest": "^25.1.0",
     "nock": "^11.7.2",

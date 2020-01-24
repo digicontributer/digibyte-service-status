@@ -1,13 +1,10 @@
 const express = require('express');
-const dwsRoutes = require('./dws.route');
-const explorerRoutes = require('./explorer.route');
-const poolRoutes = require('./pool.route');
+const dwsRoutes = require('./dws/');
+const explorerRoutes = require('./explorer/');
+const poolRoutes = require('./pool/');
 
 const router = express.Router();
 
-/**
- * GET v1/status
- */
 router.get('/status', (req, res) => res.send('OK'));
 
 router.use('/dws', dwsRoutes);

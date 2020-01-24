@@ -1,21 +1,18 @@
+const db = require('../../../lib/db');
+const logger = require('../../../config/logger');
 
-const express = require('express');
-const db = require('../../lib/db');
-const logger = require('../../config/logger');
-
-const router = express.Router();
-
-router.get('/', async (req, res) => {
+const ListDWS = async (req, res) => {
   try {
     const status = await db.getDWS();
     return res.status(200).json(status);
   }
   catch(e) {
     logger.error(e);
+    return res.status(400).send("An Error Occurred!");
   }
-});
+}
 
-router.get('/ready', async (req, res) => {
+const listFinishedDWS = async (req, res) => {
   try {
     const dbObjects = await db.getDWS();
     const status = dbObjects.filter(statusObj => statusObj.status === 'finished')
@@ -23,7 +20,11 @@ router.get('/ready', async (req, res) => {
   }
   catch(e) {
     logger.error(e);
+    return res.status(400).send("An Error Occurred!");
   }
-});
+}
 
-module.exports = router;
+module.exports = {
+  ListDWS,
+  listFinishedDWS
+}
