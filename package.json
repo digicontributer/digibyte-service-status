@@ -1,0 +1,27 @@
+{
+  "name": "digibyte-service-status",
+  "version": "1.0.0",
+  "description": "Status API for various DigiByte Ecosystem Services",
+  "main": "index.js",
+  "scripts": {
+    "start": "node index.js"
+  },
+  "author": "Digicontributer",
+  "license": "MIT",
+  "dependencies": {
+    "bluebird": "^3.7.2",
+    "body-parser": "^1.19.0",
+    "compression": "^1.7.4",
+    "cors": "^2.8.5",
+    "express": "^4.17.1",
+    "helmet": "^3.21.2",
+    "method-override": "^3.0.0",
+    "morgan": "^1.9.1",
+    "nodemailer": "^6.4.2",
+    "redis": "^2.8.0",
+    "winston": "^3.2.1"
+  },
+  "devDependencies": {
+    "jest": "^25.1.0"
+  }
+}
